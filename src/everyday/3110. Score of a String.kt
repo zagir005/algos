@@ -19,12 +19,10 @@ import kotlin.math.abs
  * памяти занимать.
  */
 
-class Solution {
-    fun scoreOfString(s: String): Int {
-        var sum = 0
-        for (i in 0..<s.length - 1) {
-            sum += abs(s[i].code - s[i + 1].code)
-        }
-        return sum
+fun scoreOfString(s: String): Int {
+    var sum = 0
+    for (i in 0..<s.length - 1) {
+        sum += abs(s[i].code - s[i + 1].code)
     }
+    return sum
 }
