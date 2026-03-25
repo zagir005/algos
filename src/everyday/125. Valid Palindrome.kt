@@ -10,7 +10,7 @@ package everyday
  * По решению с фильтрацией я по началу думал, что там O(n^2) из-за того, что
  * у нас новая строка создается с фильтрацией. Но мы ведь входной массив не учитываем изначально. Так что O(n)
  *
- * Time to solve: from 7:49 to 8:20 первое решение, фильтрацией
+ * Time to solve: фильтрацией from 7:49 to 8:20, без фильтрации from 8:20 to 8:40
  *
  * Description: two pointers задача дефолтная, берем левый и правый символы и сравниваем.
  * чуть тонкость в том, что бы скипать пробелы, запятуи всякие и при этом сравнивать в lowercase.
@@ -24,20 +24,25 @@ package everyday
  * Но ща попробую.
  *
  * С фильтром бьет 84%. Споткнулся по началу об то, что символы (запятые и тд) тоже надо фильтровать.
- * Потом написал решение без фильтрации, оно набирает 39$, видимо из-за большего количества операций
+ * Потом написал решение без фильтрации, оно набирает 39%, видимо из-за большего количества операций.
  * Но сложность по памяти у него все равно меньше, O(1)
+ * Написал отдельную функцию для валидации символа и заработал пару мс, теперь 44%
  *
  *
  * Tags: Two pointers
  */
 
-private fun isPalindrome(s: String): Boolean {
+private fun isValidSymbol(symbol: Char): Boolean {
+    return (symbol in 'a'..'z' || symbol in 'A'..'Z' || symbol in '0'..'9')
+}
+
+fun isPalindrome(s: String): Boolean {
     var left = 0
     var right = s.lastIndex
 
     while (left < right){
-        while (left < right && !s[left].isLetterOrDigit()) left++
-        while (left < right && !s[right].isLetterOrDigit()) right--
+        while (left < right && !isValidSymbol(s[left])) left++
+        while (left < right && !isValidSymbol(s[right])) right--
 
         if (s[left].lowercaseChar() != s[right].lowercaseChar()) return false
 
