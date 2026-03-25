@@ -17,6 +17,8 @@ package everyday
  * функцию копирования массива, про такую не знал. В будущем будет полезно.
  *
  * Notes:
+ *
+ * Tags:
  */
 
 private fun getConcatenation(nums: IntArray): IntArray {
