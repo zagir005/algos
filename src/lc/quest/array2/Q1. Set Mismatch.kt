@@ -1,4 +1,4 @@
-package lc.array2
+package lc.quest.array2
 
 import kotlin.math.abs
 
@@ -50,10 +50,10 @@ private fun findErrorNums(nums: IntArray): IntArray {
  * стоит отметить что у seen мы размер указали nums.size+1, делается это что бы удобно потом проходится по нему
  * при поиске missing числа, т.к. в nums[i] у нас числа от единицы. То есть, мы просто приводим массив к удобному для условий задачи виду.
  *
- *
 */
 
-fun findErrorNumsBooleanArr(nums: IntArray): IntArray {
+private fun findErrorNumsBooleanArr(nums: IntArray): IntArray {
+
     val seen = BooleanArray(nums.size + 1)
     var duplicate = 0
     var missing = 0

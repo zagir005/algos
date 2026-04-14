@@ -1,4 +1,4 @@
-package everyday
+package garbage
 
 /*
 * Algorithm complexity: O(n)

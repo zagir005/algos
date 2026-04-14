@@ -1,4 +1,4 @@
-package lc.array1
+package lc.quest.array1
 
 fun main(){
     // 0, 3, 1, 4, 2, 5

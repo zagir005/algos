@@ -1,4 +1,4 @@
-package everyday
+package garbage
 
 private fun longestCommonPrefix(strs: Array<String>): String {
     var endIndex = strs[0].length

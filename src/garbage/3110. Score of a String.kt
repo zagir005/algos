@@ -1,4 +1,4 @@
-package everyday
+package garbage
 
 import kotlin.math.abs
 

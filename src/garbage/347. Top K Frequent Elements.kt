@@ -1,4 +1,4 @@
-package everyday
+package garbage
 
 import java.util.PriorityQueue
 import kotlin.comparisons.compareByDescending

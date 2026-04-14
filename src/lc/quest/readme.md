@@ -1,4 +1,4 @@
-# Описание. Что я делаю в папке everyday
+# Описание
 Тут описываю решения задач по leetcode квестам
 
 https://leetcode.com/quest/data-structures-and-algorithms-quest/
