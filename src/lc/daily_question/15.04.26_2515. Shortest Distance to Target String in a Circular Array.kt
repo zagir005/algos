@@ -16,6 +16,8 @@ import kotlin.math.min
     По памяти: O(1)
 
     с первого раза 100% побил на lc, 29мин. на задачу ушло (но там грязными)
+
+    стоит запомнить формулу рассчета расстояния между индексами в циклическом массиве
 */
 
 private fun closestTarget(words: Array<String>, target: String, startIndex: Int): Int {
