@@ -5,5 +5,6 @@
 - contests: задачи решенные в контестах
 - garbage: алго мусор
 - lc:
+  - daily question: ежедневные задачи на lc 
   - quest: задачи решенные в leetcode quest
 
