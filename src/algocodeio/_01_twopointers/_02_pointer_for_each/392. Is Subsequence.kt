@@ -8,6 +8,7 @@ package algocodeio._01_twopointers._02_pointer_for_each
         если нашли то сдвигаем sPointer и продолжаем идти по t
 
         сложность в таком случае будет O(n) где n = t.size
+        решил за 26 мин
 */
 
 private fun isSubsequence(s: String, t: String): Boolean {
