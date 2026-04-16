@@ -1,4 +1,4 @@
-package garbage
+package algocodeio._01_twopointers._01_two_sides
 
 /**
  * Author: zagir
@@ -36,7 +36,7 @@ private fun isValidSymbol(symbol: Char): Boolean {
     return (symbol in 'a'..'z' || symbol in 'A'..'Z' || symbol in '0'..'9')
 }
 
-fun isPalindrome(s: String): Boolean {
+private fun isPalindrome(s: String): Boolean {
     var left = 0
     var right = s.lastIndex
 
