@@ -17,7 +17,7 @@ import kotlin.math.min
     O(1)
     1ч. 13м
  */
-fun removeDuplicates(nums: IntArray): Int {
+private fun removeDuplicates(nums: IntArray): Int {
     var sl = 2
     var fs = 2
 
