@@ -1,4 +1,4 @@
-package garbage
+package algocodeio._02_hashtable._02_hash_table_key_selection
 
 /**
  * Author: zagir
