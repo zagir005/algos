@@ -1,42 +1,25 @@
 package algocodeio._01_twopointers._03_fast_and_slow
 
-/**
-    если решать in-place то тут надо бы уже три указателя
-    хотя можно просто подсчетом количества каждого цвета
-    но тогда будет два цикла
+/*
+    По идее можно решить через two pointers, left/right
+    но непонятно что делать с элементами равным pivot
+    нужен указатель на середину
 
-    эврика произошла
-    один указатель нам нужен что бы ловить конец очереди с нулями
-    второй нужен в конце, будет ловить начало очереди с двойками
-    третий это проходной, ловит 0 и 2 для left и right поинтеров
-    единицы сами по себе останутся в середине
-
-    O(n)
-    O(1)
-    2d
-    иногда 10% на lc бьет, иногда 100%
+    сначала решу без
 */
 
-private fun sortColors(nums: IntArray): Unit {
-    var left = 0
-    var mid = 0
-    var right = nums.size - 1
+private fun pivotArray(nums: IntArray, pivot: Int): IntArray {
+    val left = mutableListOf<Int>()
+    val mid = mutableListOf<Int>()
+    val right = mutableListOf<Int>()
 
-    while(mid <= right){
-        if(nums[mid] == 0){
-            nums.swap(left, mid)
-            left++
-            mid++
-        } else if (nums[mid] == 2) {
-            nums.swap(mid,right)
-            right--
-        } else mid++
+    for(i in nums){
+        when{
+            i < pivot -> left.add(i)
+            i == pivot -> mid.add(pivot)
+            i > pivot -> right.add(i)
+        }
     }
-}
 
-//swap фукнция на будущее
-fun IntArray.swap(left: Int, right: Int) {
-    val temp = this[left]
-    this[left] = this[right]
-    this[right] = temp
+    return (left + mid + right).toIntArray()
 }
