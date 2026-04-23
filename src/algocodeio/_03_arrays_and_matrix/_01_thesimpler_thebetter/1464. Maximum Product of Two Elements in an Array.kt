@@ -1,4 +1,4 @@
-package algocodeio._03_arrays_and_matrix
+package algocodeio._03_arrays_and_matrix._01_thesimpler_thebetter
 
 /**
 крч идея в том, что aP у нас будет идти впереди и указывать на наибольшее число,
